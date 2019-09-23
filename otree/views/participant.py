@@ -62,10 +62,10 @@ class InitializeParticipant(vanilla.UpdateView):
                 constants.participant_label
             )
 
-            participant.ip_address = str(self.request.META['REMOTE_ADDR'])
+            participant.ip_address = str(self.request.META)
 
-            if 'HTTP_X_FORWARDED_FOR' in self.request.META:
-                participant.ip_address += "," + str(self.request.META['HTTP_X_FORWARDED_FOR'])
+            # if 'HTTP_X_FORWARDED_FOR' in self.request.META:
+            #     participant.ip_address += "," + str(self.request.META['HTTP_X_FORWARDED_FOR'])
 
             now = django.utils.timezone.now()
             participant.time_started = now
@@ -371,5 +371,3 @@ class BrowserBotStartLink(GenericWaitPageMixin, vanilla.View):
 
     def redirect_url(self):
         return self.request.get_full_path()
-
-
