@@ -61,7 +61,11 @@ class InitializeParticipant(vanilla.UpdateView):
             participant.label = participant.label or self.request.GET.get(
                 constants.participant_label
             )
-            participant.ip_address = self.request.META['REMOTE_ADDR']
+
+            participant.ip_address = str(self.request.META['REMOTE_ADDR'])
+
+            if 'HTTP_X_FORWARDED_FOR' in self.request.META:
+                participant.ip_address += "," + str(self.request.META['HTTP_X_FORWARDED_FOR'])
 
             now = django.utils.timezone.now()
             participant.time_started = now
