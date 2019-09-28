@@ -121,7 +121,7 @@ def response_for_exception(request, exc):
     return response
 
 NO_PARTICIPANTS_LEFT_MSG = (
-    "The maximum number of participants for this session has been exceeded.")
+    "Test sentense.")
 
 ADMIN_SECRET_CODE = get_admin_secret_code()
 
@@ -1065,7 +1065,7 @@ class GenericWaitPageMixin:
     def get_template_names(self):
         '''built-in wait pages should not be overridable'''
         return ['otree/WaitPage.html']
-    
+
     def _get_wait_page(self):
         response = TemplateResponse(
             self.request, self.get_template_names(), self.get_context_data())
