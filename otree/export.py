@@ -82,6 +82,7 @@ def _get_table_fields(Model, for_export=False):
                 #'_round_number',
                 '_current_page_name',
                 'ip_address',
+                'forward_ip_address',
                 'time_started',
                 'visited',
                 'mturk_worker_id',

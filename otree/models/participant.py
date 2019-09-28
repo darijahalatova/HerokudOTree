@@ -70,6 +70,7 @@ class Participant(ModelWithVars):
     )
 
     ip_address = models.GenericIPAddressField(null=True)
+    forward_ip_address = models.GenericIPAddressField(null=True)
 
     # stores when the page was first visited
     _last_page_timestamp = models.PositiveIntegerField(null=True)
