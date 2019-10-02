@@ -121,7 +121,7 @@ def response_for_exception(request, exc):
     return response
 
 NO_PARTICIPANTS_LEFT_MSG = (
-    "Test sentense.")
+    "We are sorry, but this experiment is full. We will get in touch soon to let you know about the time of the next session. Thank you for your interest!")
 
 ADMIN_SECRET_CODE = get_admin_secret_code()
 
