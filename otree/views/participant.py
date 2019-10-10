@@ -62,7 +62,7 @@ class InitializeParticipant(vanilla.UpdateView):
                 constants.participant_label
             )
 
-            participant.ip_address = self.request.META['REMOTE_ADDR'] 
+            participant.ip_address = self.request.META['REMOTE_ADDR']
 
             if 'HTTP_X_FORWARDED_FOR' in self.request.META:
                 participant.forward_ip_address = self.request.META['HTTP_X_FORWARDED_FOR']
@@ -287,7 +287,7 @@ class AssignVisitorToRoom(GenericWaitPageMixin, vanilla.View):
                 "otree/WaitPageRoom.html",
                 {
                     'view': self, 'title_text': _('Please wait'),
-                    'body_text': _('Waiting for your session to begin')
+                    'body_text': _('This session will begin at 19:00 GMT sharp. Please stay tuned.')
                 }
             )
 

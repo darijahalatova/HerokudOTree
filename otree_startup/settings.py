@@ -178,6 +178,11 @@ def get_default_settings(user_settings: dict):
                 "BACKEND": "otree.channels.asgi_redis.RedisChannelLayer",
                 "CONFIG": {
                     "hosts": [REDIS_URL],
+                    "channel_capacity": {
+                        "websocket.connect": 1000,
+                        "websocket.receive": 1000,
+                        "websocket.disconnect": 1000,
+                    }
                 },
                 'ROUTING': user_settings.get(
                     'CHANNEL_ROUTING',
