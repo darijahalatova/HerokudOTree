@@ -287,7 +287,7 @@ class AssignVisitorToRoom(GenericWaitPageMixin, vanilla.View):
                 "otree/WaitPageRoom.html",
                 {
                     'view': self, 'title_text': _('Please wait'),
-                    'body_text': _('This session will begin at 19:00 GMT sharp. Please stay tuned.')
+                    'body_text': _('This session will begin on ***Oct 11th at 17:00 GMT sharp***. Once the session starts, you will have 2 minutes to enter your Prolific ID and start with the experiment, otherwise you will get disqualified and will not receive any compensation.')
                 }
             )
 
