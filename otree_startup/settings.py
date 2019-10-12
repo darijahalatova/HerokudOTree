@@ -179,9 +179,9 @@ def get_default_settings(user_settings: dict):
                 "CONFIG": {
                     "hosts": [REDIS_URL],
                     "channel_capacity": {
-                        "websocket.connect": 1000,
-                        "websocket.receive": 1000,
-                        "websocket.disconnect": 1000,
+                        "websocket.connect": 5000,
+                        "websocket.receive": 5000,
+                        "websocket.disconnect": 5000,
                     }
                 },
                 'ROUTING': user_settings.get(
