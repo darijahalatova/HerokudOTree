@@ -287,7 +287,7 @@ class AssignVisitorToRoom(GenericWaitPageMixin, vanilla.View):
                 "otree/WaitPageRoom.html",
                 {
                     'view': self, 'title_text': _('Please wait'),
-                    'body_text': _('This session will begin ***at 11am EDT / 10am CDT / 9am MDT / 8am PDT sharp***. Please, do not close this window. Once the session starts, you will have 2 minutes to enter your MTurk ID and start with the experiment, otherwise you will get disqualified and will not receive any compensation.')
+                    'body_text': _('This session has not started yet.')
                 }
             )
 
