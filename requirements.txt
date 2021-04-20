@@ -17,7 +17,7 @@ otree-boto2-shim==0.3.2
 otree-core==0.0.0b1
 otree-save-the-change==1.1.3
 pbr==1.10.0
-py==1.4.31
+py==1.10.0
 # can't upgrade to 3.0 because assert reinterp mode was removed
 # and now we have plain assertions. maybe can figure out
 pytest==2.9.2
